@@ -56,7 +56,7 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioNext exec playerctl next
 
 ### Other ###
-bindsym Print exec scrot -q 100
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 
 ### Sound ###
 # Raise Volume
@@ -215,7 +215,7 @@ bindsym Mod4+r mode "resize"
 bar {
 #  status_command i3status --config ~/.config/i3/i3status.conf
   #status_command polybar mybar -c ~/.config/i3/polybar.conf
-  status_command /home/nix/.local/bin/bumblebee-status -m brightness cpu memory battery time pasink pasource -t solarized-powerline
+  status_command /home/nix/.local/bin/bumblebee-status -m brightness cpu memory battery time pasink pasource bluetooth -t solarized-powerline
         position top
     colors {
     separator #dc322f
