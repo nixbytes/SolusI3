@@ -69,7 +69,8 @@ bindsym XF86AudioMute exec --no-startup-id amixer -D pulse sset Master toggle-mu
 floating_modifier Mod4
 
 # start a terminal
-bindsym Mod4+Return exec i3-sensible-terminal
+bindsym Mod4+Return exec st
+#bindsym Mod4+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym Mod4+Shift+q kill
@@ -215,7 +216,7 @@ bindsym Mod4+r mode "resize"
 bar {
     # status_command i3status --config ~/.config/i3/i3status.conf
     # status_command polybar mybar -c ~/.config/i3/polybar.conf
-    status_command /home/arch13/.local/bin/bumblebee-status -m brightness cpu memory battery time pasink pasource bluetooth -t solarized-powerline
+    status_command $HOME/.local/bin/bumblebee-status -m cpu memory battery time pasink pasource bluetooth -t solarized-powerline
     position top
     colors {
     separator #dc322f
